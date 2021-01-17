@@ -23,7 +23,7 @@ public class ProductController {
 
 
     /**
-     * 插入广告分类
+     * 添加新的产品分类
      * @param entity
      * @return
      */
