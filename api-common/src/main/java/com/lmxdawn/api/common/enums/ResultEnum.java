@@ -16,6 +16,9 @@ public enum ResultEnum {
     DATA_NOT(5, "没有相关数据"),
     DATA_CHANGE(6, "数据没有任何更改"),
     DATA_REPEAT(7, "数据已存在"),
+    DATA_INSERT_FALL(8,"数据插入失败"),
+    DATA_UPDATE_FALL(9,"数据更新失败"),
+    DATA_DELETE_FALL(10,"数据删除失败")
 
     ;
 
