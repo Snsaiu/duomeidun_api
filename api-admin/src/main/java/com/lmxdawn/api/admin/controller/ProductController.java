@@ -3,6 +3,8 @@ package com.lmxdawn.api.admin.controller;
 import com.lmxdawn.api.admin.dto.product.ProductClassDto;
 import com.lmxdawn.api.admin.dto.product.UpdateProductClassDTO;
 import com.lmxdawn.api.admin.entity.ProductClass;
+import com.lmxdawn.api.admin.entity.Product;
+import com.lmxdawn.api.admin.service.product.ProductService;
 import com.lmxdawn.api.admin.service.productClass.ProductClassService;
 import com.lmxdawn.api.common.enums.ResultEnum;
 import com.lmxdawn.api.common.res.BaseResponse;
@@ -12,7 +14,6 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.Date;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 @RestController
@@ -20,6 +21,9 @@ public class ProductController {
 
     @Autowired
     private ProductClassService productClassService;
+
+    @Autowired
+    private ProductService productService;
 
 
     /**
@@ -64,5 +68,35 @@ public class ProductController {
             return ResultVOUtils.success();
         return ResultVOUtils.error(ResultEnum.DATA_DELETE_FALL);
     }
+
+
+    /**
+     * 查看指定分类下是否有产品
+     * @param id 产品分类
+     * @return
+     */
+    @GetMapping("/productclass/{id}/existproducts")
+    public BaseResponse checkClassHasProduct(@PathVariable("id") Long id)
+    {
+       boolean res= this.productService.listProductCountByParentId(id);
+        Map<String,Object> resmap=new HashMap<>();
+        resmap.put("entity",res);
+        return ResultVOUtils.success(resmap);
+    }
+
+
+
+
+//    /**
+//     * 添加产品
+//     * @param product
+//     * @return
+//     */
+//    @PostMapping("/product")
+//    public  BaseResponse insertProduct(Product product)
+//    {
+//
+//    }
+
 
 }

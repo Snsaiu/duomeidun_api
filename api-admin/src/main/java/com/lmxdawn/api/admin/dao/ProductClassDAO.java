@@ -9,15 +9,15 @@ import java.util.List;
 
 @Repository
 @Mapper
-public interface ProductClassDao {
+public interface ProductClassDAO {
 
     long Insert(ProductClass entity);
 
     List<ProductClass> GetAll();
 
-
     boolean updateProductClass(UpdateProductClassDTO entity);
 
     boolean deleteProdoctClassWithChildren(Long id);
+
 
 }

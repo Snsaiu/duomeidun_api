@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.lmxdawn.api.admin.dao.ShareDAO">
+    <insert id="insert"  useGeneratedKeys="true" keyProperty="shareId">
+        insert into share (imgsrc,title) values(#{entity.imgsrc},#{entity.title})
+    </insert>
+    <delete id="delete" parameterType="integer">
+        delete from share where share_id=#{id}
+    </delete>
+    <select id="listShare" resultType="com.lmxdawn.api.admin.entity.Share">
+        select * from share
+    </select>
+</mapper>

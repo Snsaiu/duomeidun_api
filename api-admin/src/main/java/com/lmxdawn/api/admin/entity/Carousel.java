@@ -9,7 +9,7 @@ import java.util.Date;
 public class Carousel {
 
     @Id
-    private long caro_id;
+    private int caroId;
     private String title;
     private String content;
     private Date createTime;

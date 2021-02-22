@@ -8,6 +8,6 @@ public interface CarouselService {
      boolean Insert(Carousel entity);
     boolean Update(Carousel entity);
     List<Carousel> GetAll();
-    boolean Delete(long id);
+    boolean Delete(int id);
 
 }

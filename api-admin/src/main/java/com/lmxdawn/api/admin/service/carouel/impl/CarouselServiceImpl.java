@@ -1,19 +1,18 @@
 package com.lmxdawn.api.admin.service.carouel.impl;
 
-import com.lmxdawn.api.admin.dao.CarouselDao;
+import com.lmxdawn.api.admin.dao.CarouselDAO;
 import com.lmxdawn.api.admin.entity.Carousel;
 import com.lmxdawn.api.admin.service.carouel.CarouselService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.annotation.Resource;
 import java.util.List;
 
 @Service
 public class CarouselServiceImpl implements CarouselService {
 
     @Autowired
-    private CarouselDao carouselDao;
+    private CarouselDAO carouselDao;
 
     /**
      * 添加轮播图
@@ -37,7 +36,7 @@ public class CarouselServiceImpl implements CarouselService {
     }
 
     @Override
-    public boolean Delete(long id) {
+    public boolean Delete(int id) {
         return this.carouselDao.Remove(id);
     }
 }

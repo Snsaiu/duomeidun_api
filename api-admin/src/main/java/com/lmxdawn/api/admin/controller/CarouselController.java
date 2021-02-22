@@ -7,9 +7,7 @@ import com.lmxdawn.api.common.enums.ResultEnum;
 import com.lmxdawn.api.common.res.BaseResponse;
 import com.lmxdawn.api.common.util.ResultVOUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Date;
 import java.util.HashMap;
@@ -41,6 +39,20 @@ public class CarouselController {
         map.put("carousels",res);
         return ResultVOUtils.success(res);
     }
+
+
+
+    @DeleteMapping("carousel/{id}")
+    public BaseResponse Delete(@PathVariable("id") int id)
+    {
+        boolean res= this.carouselService.Delete(id);
+        if (res)
+        {
+            return ResultVOUtils.success();
+        }
+        return ResultVOUtils.error(ResultEnum.DATA_NOT);
+    }
+
 
 
 }

@@ -8,13 +8,13 @@ import java.util.List;
 
 @Mapper
 @Repository
-public interface CarouselDao {
+public interface CarouselDAO {
 
      List<Carousel> GetAll();
 
      boolean  Add(Carousel entity);
 
-     boolean Remove(long id);
+     boolean Remove(int id);
 
      boolean Update(Carousel entity);
 

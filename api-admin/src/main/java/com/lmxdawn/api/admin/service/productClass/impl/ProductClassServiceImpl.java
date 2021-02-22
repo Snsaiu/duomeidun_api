@@ -1,6 +1,6 @@
 package com.lmxdawn.api.admin.service.productClass.impl;
 
-import com.lmxdawn.api.admin.dao.ProductClassDao;
+import com.lmxdawn.api.admin.dao.ProductClassDAO;
 import com.lmxdawn.api.admin.dto.product.ProductClassDto;
 import com.lmxdawn.api.admin.dto.product.UpdateProductClassDTO;
 import com.lmxdawn.api.admin.entity.ProductClass;
@@ -19,7 +19,7 @@ import java.util.stream.Collectors;
 public class ProductClassServiceImpl implements ProductClassService {
 
     @Autowired
-    private ProductClassDao productClassDao;
+    private ProductClassDAO productClassDao;
 
     @Override
     public ProductClass InsertProductClass(ProductClass entity) {
