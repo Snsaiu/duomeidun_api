@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.lmxdawn.api.admin.dao.ServiceImgsDAO">
+    <insert id="insert" useGeneratedKeys="true" keyProperty="serviceimgId">
+        insert into service_imgs (img,create_time,pid) values (#{img},#{createTime},#{pid})
+    </insert>
+    <delete id="remove">
+        delete from service_imgs where pid=#{pid}
+    </delete>
+    <delete id="removebyid">
+        delete from service_imgs where serviceimg_id=#{id}
+    </delete>
+    <select id="getallbyid" resultType="com.lmxdawn.api.admin.entity.ServiceImgs">
+        select * from service_imgs where pid=#{pid}
+    </select>
+</mapper>

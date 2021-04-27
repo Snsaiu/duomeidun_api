@@ -8,4 +8,6 @@ public class UpdateProductClassDTO {
     private Long id;
     private String name;
     private String summary;
+    private  String title;
+    private  String content;
 }

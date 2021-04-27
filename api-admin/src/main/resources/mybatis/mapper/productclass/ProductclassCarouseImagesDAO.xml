@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.lmxdawn.api.admin.dao.ProductclassCarouseImagesDAO">
+    <insert id="insert" parameterType="com.lmxdawn.api.admin.entity.ProductclassCarouseImages" keyProperty="pccimageId" useGeneratedKeys="true">
+        insert into productclass_carouse_images (title,summary,image,create_time,pid) values (#{title},#{summary},#{image},#{createTime},#{pid})
+    </insert>
+    <delete id="remove" parameterType="int">
+        delete from productclass_carouse_images where pccimage_id=id
+    </delete>
+    <select id="getListByPid" resultType="com.lmxdawn.api.admin.entity.ProductclassCarouseImages"
+            parameterType="int">
+
+          select * from productclass_carouse_images where pid=#{pid}
+    </select>
+
+</mapper>

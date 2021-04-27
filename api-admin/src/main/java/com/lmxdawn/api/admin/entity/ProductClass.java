@@ -12,6 +12,8 @@ public class ProductClass {
     private  String summary;
     private Date createTime;
     private  long parentId;
+    private  String title;
+    private  String content;
 
 
 }

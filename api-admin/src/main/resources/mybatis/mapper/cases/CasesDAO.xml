@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.lmxdawn.api.admin.dao.CasesDAO">
+    <insert id="Insert" useGeneratedKeys="true" keyProperty="caseId" >
+        insert  into cases (title,summary,img,video_path,keywords,create_time) values (#{title},#{summary},#{img},#{videoPath},#{keywords},#{createTime})
+    </insert>
+    <delete id="DeleteById">
+        delete from cases where case_id =#{id}
+    </delete>
+    <select id="GetByPage" resultType="com.lmxdawn.api.admin.entity.Cases">
+        select * from cases limit #{start},#{end}  order by create_time
+    </select>
+    <select id="Getall" resultType="com.lmxdawn.api.admin.entity.Cases">
+        select  * from cases
+    </select>
+
+</mapper>

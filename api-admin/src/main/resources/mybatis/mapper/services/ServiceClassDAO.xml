@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.lmxdawn.api.admin.dao.ServiceClassDAO">
+    <insert id="insert">
+        insert into service_class (title,summary) values (#{title},#{summary})
+    </insert>
+    <update id="update">
+        update service_class set title=#{title},summary=#{summary} where service_id=#{serviceId}
+    </update>
+    <delete id="remove">
+        delete from service_class where service_id=#{id}
+    </delete>
+    <select id="getall" resultType="com.lmxdawn.api.admin.entity.ServiceClass">
+        select * from service_class
+    </select>
+    <select id="getbyid" resultType="com.lmxdawn.api.admin.entity.ServiceClass" parameterType="int">
+        select * from service_class where service_id=#{id}
+    </select>
+
+</mapper>

@@ -1,9 +1,13 @@
 package com.lmxdawn.api.admin.controller;
 
 import com.lmxdawn.api.admin.dto.product.ProductClassDto;
+import com.lmxdawn.api.admin.dto.product.ProductClassImageDTO;
+import com.lmxdawn.api.admin.dto.product.ProductClassSoloDTO;
 import com.lmxdawn.api.admin.dto.product.UpdateProductClassDTO;
 import com.lmxdawn.api.admin.entity.ProductClass;
 import com.lmxdawn.api.admin.entity.Product;
+import com.lmxdawn.api.admin.entity.ProductclassCarouseImages;
+import com.lmxdawn.api.admin.entity.ProductclassImages;
 import com.lmxdawn.api.admin.service.product.ProductService;
 import com.lmxdawn.api.admin.service.productClass.ProductClassService;
 import com.lmxdawn.api.common.enums.ResultEnum;
@@ -14,6 +18,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.Date;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @RestController
@@ -50,7 +55,7 @@ public class ProductController {
         return ResultVOUtils.success(resmap);
     }
 
-    @PutMapping("/productclass")
+    @PostMapping("/updateproductclass")
     public BaseResponse UpdateProductClass(UpdateProductClassDTO entity)
     {
         boolean update_res=this.productClassService.updateProductClass(entity);
@@ -69,6 +74,42 @@ public class ProductController {
         return ResultVOUtils.error(ResultEnum.DATA_DELETE_FALL);
     }
 
+    @PostMapping("/productclass/insertimage")
+    public BaseResponse insertClassImage(ProductclassImages image)
+    {
+        ProductclassImages classImage = this.productClassService.inserClassImage(image);
+        return  ResultVOUtils.success(classImage);
+    };
+
+    @DeleteMapping("/productclass/removeimage/{id}")
+    public BaseResponse deleteClassImage(@PathVariable("id") int id)
+    {
+        boolean res=this.productClassService.removeClassImage(id);
+        return ResultVOUtils.success(res);
+    }
+
+    @PostMapping("/productclass/insertcarouse")
+    public  BaseResponse insertcarouseimage(ProductclassCarouseImages image)
+    {
+        ProductclassCarouseImages images = this.productClassService.insertCarouseImage(image);
+        return ResultVOUtils.success(images);
+
+    }
+
+    @DeleteMapping("/productclass/removecaouseimage/{id}")
+    public  BaseResponse removecarouseImage(@PathVariable("id") int id)
+    {
+        boolean res=this.productClassService.remoceCarouseimage(id);
+        return ResultVOUtils.success(res);
+    }
+
+    @GetMapping("/productclass/getimagecarouse/{pid}")
+    public  BaseResponse getimageCarouseByid(@PathVariable("pid") int pid)
+    {
+        List<ProductClassImageDTO> getproductimagebypid = this.productClassService.getproductimagebypid(pid);
+        return ResultVOUtils.success(getproductimagebypid);
+    }
+
 
     /**
      * 查看指定分类下是否有产品
@@ -83,6 +124,15 @@ public class ProductController {
         resmap.put("entity",res);
         return ResultVOUtils.success(resmap);
     }
+
+    @GetMapping("/product/solo/{id}")
+    public  BaseResponse getproductsolobyid(@PathVariable("id") Long id)
+    {
+        ProductClassSoloDTO res = this.productClassService.getproductsolobyid(Math.toIntExact(id));
+        return ResultVOUtils.success(res);
+
+    }
+
 
 
 

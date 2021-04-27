@@ -16,6 +16,7 @@ import javax.websocket.server.PathParam;
 import java.io.File;
 import java.io.IOException;
 import java.util.Date;
+import java.util.List;
 import java.util.UUID;
 
 @RestController
@@ -100,6 +101,14 @@ public class BrandController {
         return filename;
     }
 
+
+    @GetMapping("/brandvideo")
+    public BaseResponse GetMainVideo()
+    {
+        List<Video> videos = this.videoIService.GetByTypeId(-1);
+        return ResultVOUtils.success(videos.get(0));
+
+    }
 
 
 
