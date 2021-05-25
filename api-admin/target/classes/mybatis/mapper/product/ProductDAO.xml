@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.lmxdawn.api.admin.dao.ProductDAO">
+
+<!--    获得当前产品分类下产品的个数-->
+    <select id="listProductCountByParentId" resultType="java.lang.Long">
+        select count(*) from product where parent_id=#{id}
+    </select>
+</mapper>

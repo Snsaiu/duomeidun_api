@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.lmxdawn.api.admin.dao.CarouselDAO">
+<!--    插入-->
+    <insert id="Add" parameterType="com.lmxdawn.api.admin.entity.Carousel">
+        insert into carousel (title,content,create_time,img_path,product_class_id) values (#{title},#{content},#{createTime},#{imgPath},#{productClassId})
+    </insert>
+<!--    修改-->
+    <update id="Update">
+        update carousel set title=#{title},content=#{content},create_time=#{createTime},img_path=#{imgPath},product_class_id=#{productClassId} where caro_id=#{caroId}
+    </update>
+<!--    删除-->
+    <delete id="Remove" parameterType="integer">
+        delete from carousel where caro_id=#{id}
+    </delete>
+<!--获得全部-->
+    <select id="GetAll" resultType="com.lmxdawn.api.admin.entity.Carousel">
+        select  * from carousel
+    </select>
+</mapper>

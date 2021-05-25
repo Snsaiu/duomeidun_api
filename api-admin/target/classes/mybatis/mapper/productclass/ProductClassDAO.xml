@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.lmxdawn.api.admin.dao.ProductClassDAO">
+    <insert id="Insert" useGeneratedKeys="true" keyProperty="proclassId">
+        insert into product_class (name,summary,create_time,parent_id,title,content) values (#{name}, #{summary},#{createTime},#{parentId},#{title},#{content})
+    </insert>
+    <update id="updateProductClass">
+        update product_class set name=#{entity.name},summary=#{entity.summary},title=#{entity.title},content=#{entity.content} where proclass_id=#{entity.id}
+    </update>
+    <delete id="deleteProdoctClassWithChildren">
+        delete from product_class where parent_id=#{id} || proclass_id=#{id}
+    </delete>
+    <select id="GetAll" resultType="com.lmxdawn.api.admin.entity.ProductClass">
+        select * from product_class
+    </select>
+    <select id="getbyid" resultType="com.lmxdawn.api.admin.entity.ProductClass">
+        select * from product_class where proclass_id=#{id}
+    </select>
+</mapper>

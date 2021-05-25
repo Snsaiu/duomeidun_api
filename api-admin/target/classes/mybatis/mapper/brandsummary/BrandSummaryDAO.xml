@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.lmxdawn.api.admin.dao.BrandSummaryDAO">
+    <update id="UpdateSummary">
+        update brand_summary set summary = #{summary} where brand_id=#{brandId}
+    </update>
+
+
+    <select id="GetBrandSummaryById" resultType="com.lmxdawn.api.admin.entity.BrandSummary">
+        select * from brand_summary where brand_id =#{id}
+    </select>
+</mapper>
