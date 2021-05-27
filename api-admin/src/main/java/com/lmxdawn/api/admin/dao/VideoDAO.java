@@ -19,6 +19,4 @@ public interface VideoDAO {
     boolean DeleteByTypeId(@Param("id") int id);
     int Insert( Video entity);
 
-
-
 }

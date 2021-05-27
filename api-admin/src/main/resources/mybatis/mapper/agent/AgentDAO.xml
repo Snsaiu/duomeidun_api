@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.lmxdawn.api.admin.dao.AgentDAO">
+    <insert id="Add" parameterType="com.lmxdawn.api.admin.entity.Agent">
+        insert into agent (name,phone,area,branded,summary) values (#{name},#{phone},#{area},#{branded},#{summary})
+    </insert>
+    <update id="UpdateContent" parameterType="com.lmxdawn.api.admin.entity.AgentContent">
+        update agent_content set content=#{content} where id=1
+    </update>
+    <select id="GetContent" resultType="java.lang.String">
+        select content from agent_content where id=1
+    </select>
+    <select id="GetAll" resultType="com.lmxdawn.api.admin.entity.Agent">
+        select * from agent
+    </select>
+</mapper>

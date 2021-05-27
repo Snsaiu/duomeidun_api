@@ -4,6 +4,7 @@
 /Users/saiu/IdeaProjects/duomeidun_api/api-admin/src/main/java/com/lmxdawn/api/admin/service/brandsummary/Impl/BrandSummaryServiceImpl.java
 /Users/saiu/IdeaProjects/duomeidun_api/api-admin/src/main/java/com/lmxdawn/api/admin/entity/auth/AuthPermissionRule.java
 /Users/saiu/IdeaProjects/duomeidun_api/api-admin/src/main/java/com/lmxdawn/api/admin/dao/auth/AuthRoleAdminDao.java
+/Users/saiu/IdeaProjects/duomeidun_api/api-admin/src/main/java/com/lmxdawn/api/admin/service/agent/impl/AgentServiceImpl.java
 /Users/saiu/IdeaProjects/duomeidun_api/api-admin/src/main/java/com/lmxdawn/api/admin/req/ad/AdSaveRequest.java
 /Users/saiu/IdeaProjects/duomeidun_api/api-admin/src/main/java/com/lmxdawn/api/admin/res/ad/AdSiteResponse.java
 /Users/saiu/IdeaProjects/duomeidun_api/api-admin/src/main/java/com/lmxdawn/api/admin/controller/ProductController.java
@@ -30,6 +31,7 @@
 /Users/saiu/IdeaProjects/duomeidun_api/api-admin/src/main/java/com/lmxdawn/api/admin/req/ad/AdSiteQueryRequest.java
 /Users/saiu/IdeaProjects/duomeidun_api/api-admin/src/main/java/com/lmxdawn/api/admin/service/ad/AdSiteService.java
 /Users/saiu/IdeaProjects/duomeidun_api/api-admin/src/main/java/com/lmxdawn/api/admin/entity/Carousel.java
+/Users/saiu/IdeaProjects/duomeidun_api/api-admin/src/main/java/com/lmxdawn/api/admin/dao/AgentDAO.java
 /Users/saiu/IdeaProjects/duomeidun_api/api-admin/src/main/java/com/lmxdawn/api/admin/dao/VideoDAO.java
 /Users/saiu/IdeaProjects/duomeidun_api/api-admin/src/main/java/com/lmxdawn/api/admin/util/JwtUtils.java
 /Users/saiu/IdeaProjects/duomeidun_api/api-admin/src/main/java/com/lmxdawn/api/admin/entity/ProductImages.java
@@ -46,9 +48,11 @@
 /Users/saiu/IdeaProjects/duomeidun_api/api-admin/src/main/java/com/lmxdawn/api/admin/dao/auth/AuthAdminDao.java
 /Users/saiu/IdeaProjects/duomeidun_api/api-admin/src/main/java/com/lmxdawn/api/admin/util/PasswordUtils.java
 /Users/saiu/IdeaProjects/duomeidun_api/api-admin/src/main/java/com/lmxdawn/api/admin/dto/product/InsertProductDTO.java
+/Users/saiu/IdeaProjects/duomeidun_api/api-admin/src/main/java/com/lmxdawn/api/admin/service/agent/AgentService.java
 /Users/saiu/IdeaProjects/duomeidun_api/api-admin/src/main/java/com/lmxdawn/api/admin/req/ad/AdQueryRequest.java
 /Users/saiu/IdeaProjects/duomeidun_api/api-admin/src/main/java/com/lmxdawn/api/admin/dao/ServiceClassDAO.java
 /Users/saiu/IdeaProjects/duomeidun_api/api-admin/src/main/java/com/lmxdawn/api/admin/req/auth/AuthRoleAuthRequest.java
+/Users/saiu/IdeaProjects/duomeidun_api/api-admin/src/main/java/com/lmxdawn/api/admin/entity/AgentContent.java
 /Users/saiu/IdeaProjects/duomeidun_api/api-admin/src/main/java/com/lmxdawn/api/admin/annotation/AuthRuleAnnotation.java
 /Users/saiu/IdeaProjects/duomeidun_api/api-admin/src/main/java/com/lmxdawn/api/admin/res/auth/AuthAdminResponse.java
 /Users/saiu/IdeaProjects/duomeidun_api/api-admin/src/main/java/com/lmxdawn/api/admin/controller/CasesController.java
@@ -72,6 +76,7 @@
 /Users/saiu/IdeaProjects/duomeidun_api/api-admin/src/main/java/com/lmxdawn/api/admin/entity/ProductClass.java
 /Users/saiu/IdeaProjects/duomeidun_api/api-admin/src/main/java/com/lmxdawn/api/admin/res/auth/AuthPermissionRuleMergeResponse.java
 /Users/saiu/IdeaProjects/duomeidun_api/api-admin/src/main/java/com/lmxdawn/api/admin/req/ad/AdSiteSaveRequest.java
+/Users/saiu/IdeaProjects/duomeidun_api/api-admin/src/main/java/com/lmxdawn/api/admin/controller/AgentController.java
 /Users/saiu/IdeaProjects/duomeidun_api/api-admin/src/main/java/com/lmxdawn/api/admin/service/auth/impl/AuthRoleAdminServiceImpl.java
 /Users/saiu/IdeaProjects/duomeidun_api/api-admin/src/main/java/com/lmxdawn/api/admin/dao/CarouselDAO.java
 /Users/saiu/IdeaProjects/duomeidun_api/api-admin/src/main/java/com/lmxdawn/api/admin/dao/CasesDAO.java
@@ -87,6 +92,7 @@
 /Users/saiu/IdeaProjects/duomeidun_api/api-admin/src/main/java/com/lmxdawn/api/admin/controller/auth/LoginController.java
 /Users/saiu/IdeaProjects/duomeidun_api/api-admin/src/main/java/com/lmxdawn/api/admin/entity/ProductclassCarouseImages.java
 /Users/saiu/IdeaProjects/duomeidun_api/api-admin/src/main/java/com/lmxdawn/api/admin/dto/product/ProductClassSoloDTO.java
+/Users/saiu/IdeaProjects/duomeidun_api/api-admin/src/main/java/com/lmxdawn/api/admin/entity/Agent.java
 /Users/saiu/IdeaProjects/duomeidun_api/api-admin/src/main/java/com/lmxdawn/api/admin/controller/auth/AuthPermissionRuleController.java
 /Users/saiu/IdeaProjects/duomeidun_api/api-admin/src/main/java/com/lmxdawn/api/admin/req/ListPageRequest.java
 /Users/saiu/IdeaProjects/duomeidun_api/api-admin/src/main/java/com/lmxdawn/api/admin/dto/CreateCaseDTO.java

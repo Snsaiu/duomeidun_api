@@ -1,0 +1,8 @@
+com/lmxdawn/api/BaseApiAdminApplicationTest.class
+com/lmxdawn/api/admin/service/auth/impl/AuthLoginServiceImplTest.class
+com/lmxdawn/api/admin/service/auth/impl/AuthPermissionRuleServiceImplTest.class
+com/lmxdawn/api/admin/util/PermissionRuleTreeUtilsTest.class
+com/lmxdawn/api/admin/util/JwtUtilsTest.class
+com/lmxdawn/api/admin/service/auth/impl/AuthRoleServiceImplTest.class
+com/lmxdawn/api/admin/service/auth/impl/AuthAdminServiceImplTest.class
+com/lmxdawn/api/admin/service/auth/impl/AuthRoleAdminServiceImplTest.class
