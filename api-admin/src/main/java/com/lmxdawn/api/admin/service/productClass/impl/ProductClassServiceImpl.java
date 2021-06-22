@@ -3,10 +3,7 @@ package com.lmxdawn.api.admin.service.productClass.impl;
 import com.lmxdawn.api.admin.dao.ProductClassDAO;
 import com.lmxdawn.api.admin.dao.ProductclassCarouseImagesDAO;
 import com.lmxdawn.api.admin.dao.ProductclassImageDAO;
-import com.lmxdawn.api.admin.dto.product.ProductClassDto;
-import com.lmxdawn.api.admin.dto.product.ProductClassImageDTO;
-import com.lmxdawn.api.admin.dto.product.ProductClassSoloDTO;
-import com.lmxdawn.api.admin.dto.product.UpdateProductClassDTO;
+import com.lmxdawn.api.admin.dto.product.*;
 import com.lmxdawn.api.admin.entity.ProductClass;
 import com.lmxdawn.api.admin.entity.ProductclassCarouseImages;
 import com.lmxdawn.api.admin.entity.ProductclassImages;
@@ -69,6 +66,18 @@ public class ProductClassServiceImpl implements ProductClassService {
         }
         return null;
     }
+
+    @Override
+    public List<SearchProductDTO> Search(String keyword) {
+
+        ProductClassDto all = this.GetProductClasses();
+        if(all.getChildren().size()==0)
+            return null;
+
+        return null;
+
+    }
+
 
 
     @Override

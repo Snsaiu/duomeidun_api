@@ -24,6 +24,7 @@ public class CasesController {
     private CasesDAO casesDAO;
 
     @PostMapping("/cases")
+    @ResponseBody
     public BaseResponse Insert(MultipartFile file, CreateCaseDTO video)
     {
 

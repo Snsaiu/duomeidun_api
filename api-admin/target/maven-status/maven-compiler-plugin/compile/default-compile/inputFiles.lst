@@ -76,6 +76,7 @@
 /Users/saiu/IdeaProjects/duomeidun_api/api-admin/src/main/java/com/lmxdawn/api/admin/entity/ProductClass.java
 /Users/saiu/IdeaProjects/duomeidun_api/api-admin/src/main/java/com/lmxdawn/api/admin/res/auth/AuthPermissionRuleMergeResponse.java
 /Users/saiu/IdeaProjects/duomeidun_api/api-admin/src/main/java/com/lmxdawn/api/admin/req/ad/AdSiteSaveRequest.java
+/Users/saiu/IdeaProjects/duomeidun_api/api-admin/src/main/java/com/lmxdawn/api/admin/dto/product/SearchProductDTO.java
 /Users/saiu/IdeaProjects/duomeidun_api/api-admin/src/main/java/com/lmxdawn/api/admin/controller/AgentController.java
 /Users/saiu/IdeaProjects/duomeidun_api/api-admin/src/main/java/com/lmxdawn/api/admin/service/auth/impl/AuthRoleAdminServiceImpl.java
 /Users/saiu/IdeaProjects/duomeidun_api/api-admin/src/main/java/com/lmxdawn/api/admin/dao/CarouselDAO.java

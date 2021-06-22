@@ -1,9 +1,6 @@
 package com.lmxdawn.api.admin.service.productClass;
 
-import com.lmxdawn.api.admin.dto.product.ProductClassDto;
-import com.lmxdawn.api.admin.dto.product.ProductClassImageDTO;
-import com.lmxdawn.api.admin.dto.product.ProductClassSoloDTO;
-import com.lmxdawn.api.admin.dto.product.UpdateProductClassDTO;
+import com.lmxdawn.api.admin.dto.product.*;
 import com.lmxdawn.api.admin.entity.ProductClass;
 import com.lmxdawn.api.admin.entity.ProductclassCarouseImages;
 import com.lmxdawn.api.admin.entity.ProductclassImages;
@@ -16,6 +13,8 @@ public interface ProductClassService {
     ProductClass InsertProductClass(ProductClass entity);
 
     ProductClassDto GetProductClasses();
+
+    List<SearchProductDTO> Search(String keyword);
 
     boolean updateProductClass(UpdateProductClassDTO entity);
 

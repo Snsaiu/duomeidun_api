@@ -14,6 +14,8 @@ public interface ProductClassDAO {
 
     long Insert(ProductClass entity);
 
+
+
     List<ProductClass> GetAll();
 
     boolean updateProductClass(@Param("entity") UpdateProductClassDTO entity);

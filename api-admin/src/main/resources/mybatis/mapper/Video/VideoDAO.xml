@@ -5,7 +5,7 @@
         insert into video (video_path,update_time,type_id,title,summary) values (#{videoPath},#{updateTime},#{typeId},#{title},#{summary})
     </insert>
     <update id="UpdateById" parameterType="com.lmxdawn.api.admin.entity.Video">
-        update video set title= #{title},video_path =#{path},update_time=#{updateTime},summary=#{summary}
+        update video set title= #{entity.title},video_path =#{entity.videoPath},update_time=#{entity.updateTime},summary=#{entity.summary} where video_id=#{entity.videoId}
     </update>
     <delete id="DeleteByTypeId" parameterType="int">
         delete from video where typeId=#{id}
