@@ -12,6 +12,7 @@ import com.lmxdawn.api.admin.util.TreeUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.validation.constraints.AssertFalse;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -74,7 +75,58 @@ public class ProductClassServiceImpl implements ProductClassService {
         if(all.getChildren().size()==0)
             return null;
 
-        return null;
+        List<ProductClassDto> outs=new ArrayList<>();
+        this.childsearch(all.getChildren(),outs,keyword, false);
+
+        List<SearchProductDTO> res=new ArrayList<>();
+        for (ProductClassDto item: outs) {
+
+            // 根据id获得图片
+            String img= this.productclassImageDAO.getImageByPid((int) item.getId());
+            SearchProductDTO s=new SearchProductDTO();
+            s.setImage(img);
+            s.setId(item.getId());
+            s.setName(item.getName());
+            s.setSummary(item.getSummary());
+            res.add(s);
+        }
+
+        return res;
+
+
+
+
+
+
+    }
+
+    private void childsearch(List<ProductClassDto> source, List<ProductClassDto> out, String keyword, boolean need)
+    {
+
+        for (ProductClassDto item :
+                source) {
+            if(need)
+            {
+                if(item.getChildren()==null||item.getChildren().size()==0)
+                {
+                    out.add(item);
+                }
+                else{
+                    this.childsearch(item.getChildren(),out,keyword,true);
+                }
+            }
+
+            else if(item.getName().contains(keyword)||item.getSummary().contains(keyword))
+            {
+               if(item.getChildren()==null||item.getChildren().size()==0)
+               {
+                   out.add(item);
+               }
+               else{
+                   this.childsearch(item.getChildren(),out,keyword,true);
+               }
+            }
+        }
 
     }
 

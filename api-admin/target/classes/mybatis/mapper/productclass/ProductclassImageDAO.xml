@@ -11,4 +11,7 @@
     <select id="getAllByPid" resultType="com.lmxdawn.api.admin.entity.ProductclassImages" parameterType="int">
         select * from productclass_images where pid=#{pid}
     </select>
+    <select id="getImageByPid" resultType="java.lang.String">
+        select image from productclass_images where pid=#{id} limit 1
+    </select>
 </mapper>

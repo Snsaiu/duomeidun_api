@@ -1,9 +1,6 @@
 package com.lmxdawn.api.admin.controller;
 
-import com.lmxdawn.api.admin.dto.product.ProductClassDto;
-import com.lmxdawn.api.admin.dto.product.ProductClassImageDTO;
-import com.lmxdawn.api.admin.dto.product.ProductClassSoloDTO;
-import com.lmxdawn.api.admin.dto.product.UpdateProductClassDTO;
+import com.lmxdawn.api.admin.dto.product.*;
 import com.lmxdawn.api.admin.entity.ProductClass;
 import com.lmxdawn.api.admin.entity.Product;
 import com.lmxdawn.api.admin.entity.ProductclassCarouseImages;
@@ -131,6 +128,13 @@ public class ProductController {
         ProductClassSoloDTO res = this.productClassService.getproductsolobyid(Math.toIntExact(id));
         return ResultVOUtils.success(res);
 
+    }
+
+    @GetMapping("/product/search/{param}")
+    public  BaseResponse searchProduct(@PathVariable("param") String param)
+    {
+        List<SearchProductDTO> res = this.productClassService.Search(param);
+        return ResultVOUtils.success(res);
     }
 
 

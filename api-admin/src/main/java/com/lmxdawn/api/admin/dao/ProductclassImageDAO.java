@@ -17,6 +17,11 @@ public interface ProductclassImageDAO {
 
     List<ProductclassImages> getAllByPid(Integer pid);
 
+    String getImageByPid(Integer pid);
+
+
+
+
 
 
 }

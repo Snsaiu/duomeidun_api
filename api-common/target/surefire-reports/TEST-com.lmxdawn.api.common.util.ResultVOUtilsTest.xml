@@ -3,14 +3,11 @@
   <properties>
     <property name="gopherProxySet" value="false"/>
     <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/>
-    <property name="socksProxyHost" value="127.0.0.1"/>
-    <property name="http.proxyHost" value="127.0.0.1"/>
-    <property name="java.specification.version" value="1.8"/>
     <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="java.specification.version" value="1.8"/>
     <property name="sun.cpu.isalist" value=""/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
     <property name="java.class.path" value="/Users/saiu/IdeaProjects/duomeidun_api/api-common/target/test-classes:/Users/saiu/IdeaProjects/duomeidun_api/api-common/target/classes:/Users/saiu/.m2/repository/org/projectlombok/lombok/1.18.6/lombok-1.18.6.jar:/Users/saiu/.m2/repository/org/apache/commons/commons-lang3/3.9/commons-lang3-3.9.jar:"/>
-    <property name="https.proxyPort" value="7890"/>
     <property name="java.vm.vendor" value="Azul Systems, Inc."/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.vendor.url" value="http://www.azulsystems.com/"/>
@@ -20,8 +17,7 @@
     <property name="user.country" value="CN"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home/jre/lib"/>
-    <property name="sun.java.command" value="/Users/saiu/IdeaProjects/duomeidun_api/api-common/target/surefire/surefirebooter8120826515784981574.jar /Users/saiu/IdeaProjects/duomeidun_api/api-common/target/surefire 2021-06-22T15-03-11_219-jvmRun1 surefire1892693882594465754tmp surefire_0586456035235514884tmp"/>
-    <property name="http.nonProxyHosts" value="192.168.0.0/16|*.192.168.0.0/16|10.0.0.0/8|*.10.0.0.0/8|172.16.0.0/12|*.172.16.0.0/12|127.0.0.1|localhost|*.localhost|local|*.local|timestamp.apple.com|*.timestamp.apple.com"/>
+    <property name="sun.java.command" value="/Users/saiu/IdeaProjects/duomeidun_api/api-common/target/surefire/surefirebooter213899874500184451.jar /Users/saiu/IdeaProjects/duomeidun_api/api-common/target/surefire 2021-06-25T18-12-17_205-jvmRun1 surefire2468032407363367895tmp surefire_08157242482862617359tmp"/>
     <property name="surefire.test.class.path" value="/Users/saiu/IdeaProjects/duomeidun_api/api-common/target/test-classes:/Users/saiu/IdeaProjects/duomeidun_api/api-common/target/classes:/Users/saiu/.m2/repository/org/projectlombok/lombok/1.18.6/lombok-1.18.6.jar:/Users/saiu/.m2/repository/org/apache/commons/commons-lang3/3.9/commons-lang3-3.9.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="/Users/saiu"/>
@@ -29,17 +25,15 @@
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="java.home" value="/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home/jre"/>
     <property name="basedir" value="/Users/saiu/IdeaProjects/duomeidun_api/api-common"/>
-    <property name="https.proxyHost" value="127.0.0.1"/>
     <property name="file.separator" value="/"/>
     <property name="line.separator" value="&#10;"/>
     <property name="jdk.vendor.version" value="Zulu 8.52.0.23-CA-macos-aarch64"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="/Users/saiu/IdeaProjects/duomeidun_api/api-common/target/surefire/surefirebooter8120826515784981574.jar"/>
+    <property name="surefire.real.class.path" value="/Users/saiu/IdeaProjects/duomeidun_api/api-common/target/surefire/surefirebooter213899874500184451.jar"/>
     <property name="sun.boot.class.path" value="/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home/jre/lib/sunrsasign.jar:/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home/jre/classes"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
-    <property name="ftp.nonProxyHosts" value="192.168.0.0/16|*.192.168.0.0/16|10.0.0.0/8|*.10.0.0.0/8|172.16.0.0/12|*.172.16.0.0/12|127.0.0.1|localhost|*.localhost|local|*.local|timestamp.apple.com|*.timestamp.apple.com"/>
     <property name="java.runtime.version" value="1.8.0_282-b08"/>
     <property name="user.name" value="saiu"/>
     <property name="path.separator" value=":"/>
@@ -55,7 +49,6 @@
     <property name="java.version" value="1.8.0_282"/>
     <property name="user.dir" value="/Users/saiu/IdeaProjects/duomeidun_api/api-common"/>
     <property name="os.arch" value="aarch64"/>
-    <property name="socksProxyPort" value="7890"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="java.awt.printerjob" value="sun.lwawt.macosx.CPrinterJob"/>
     <property name="sun.os.patch.level" value="unknown"/>
@@ -66,7 +59,5 @@
     <property name="java.ext.dirs" value="/Users/saiu/Library/Java/Extensions:/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home/jre/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java"/>
     <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
     <property name="java.class.version" value="52.0"/>
-    <property name="socksNonProxyHosts" value="192.168.0.0/16|*.192.168.0.0/16|10.0.0.0/8|*.10.0.0.0/8|172.16.0.0/12|*.172.16.0.0/12|127.0.0.1|localhost|*.localhost|local|*.local|timestamp.apple.com|*.timestamp.apple.com"/>
-    <property name="http.proxyPort" value="7890"/>
   </properties>
 </testsuite>
