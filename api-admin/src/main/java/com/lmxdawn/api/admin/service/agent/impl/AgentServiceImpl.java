@@ -36,4 +36,11 @@ public class AgentServiceImpl implements AgentService {
     public List<Agent> AgentList() {
         return this.agentDAO.GetAll();
     }
+
+    @Override
+    public boolean Update(Agent entity) {
+
+       return this.agentDAO.Update(entity);
+
+    }
 }

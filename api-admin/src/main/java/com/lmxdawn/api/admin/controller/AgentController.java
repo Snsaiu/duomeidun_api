@@ -81,5 +81,12 @@ public class AgentController {
         return ResultVOUtils.success(this.agentService.AgentList());
     }
 
+    @PostMapping("/agentupdate")
+    public  BaseResponse Update(Agent entity)
+    {
+        boolean updateres= this.agentService.Update(entity);
+
+        return ResultVOUtils.success();
+    }
 
 }

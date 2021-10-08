@@ -22,4 +22,5 @@ public interface AgentService {
     List<Agent> AgentList();
 
 
+    boolean Update(Agent entity);
 }

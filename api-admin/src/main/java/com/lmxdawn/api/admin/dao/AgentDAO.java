@@ -18,4 +18,6 @@ public interface AgentDAO {
     String GetContent();
     List<Agent> GetAll();
 
+    boolean Update(Agent entity);
+
 }

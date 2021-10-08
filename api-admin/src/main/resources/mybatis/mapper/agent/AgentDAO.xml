@@ -13,4 +13,8 @@
     <select id="GetAll" resultType="com.lmxdawn.api.admin.entity.Agent">
         select * from agent
     </select>
+
+    <update id="Update" parameterType="com.lmxdawn.api.admin.entity.Agent">
+        update agent set state=#{state} where id=#{id}
+    </update>
 </mapper>
